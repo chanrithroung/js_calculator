@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        background-color: #78c1f1;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .container {
+        height: 550px;
+        width: 370px;
+        background-color: #090b11;
+        border-radius: 20px;
+        padding: 20px 10px;
+      }
+
+      #display {
+        height: 80px;
+        font-size: 50px;
+        font-weight: 500;
+        text-align: end;
+        padding: 0 30px;
+        font-family: sans-serif;
+        color: #ffffff;
+        overflow-x: scroll;
+        scrollbar-width: none;
+      }
+
+      .light-gray {
+        color: #000000;
+        background-color: #9f9fa2;
+      }
+
+      .light-gray:active {
+        background-color: #a4a4a7;
+      }
+
+      .yellow {
+        background-color: #ff9502;
+        color: white;
+      }
+
+      .yellow:active {
+        background-color: #fda529;
+      }
+
+      .dark-gray {
+        background-color: #303030;
+        color: #ffffff;
+      }
+      .dark-gray:active {
+        background-color: #474747;
+      }
+
+      .btn-group {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+        width: 100%;
+        height: calc(100% - 80px);
+      }
+
+      .btn {
+        height: 73px;
+        width: 73px;
+        font-size: 30px;
+        font-family: sans-serif;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #zero {
+        width: 160px;
+        border-radius: 50px;
+        
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="display" class="display">0</div>
+      <div class="btn-group">
+        <div onclick="action('AC')" class="btn light-gray">AC</div>
+        <div onclick="action('DEL')" class="btn light-gray">DEL</div>
+        <div onclick="action('%')" class="btn light-gray">%</div>
+        <div onclick="action('/')" class="btn yellow">/</div>
+        <div onclick="action('7')" class="btn dark-gray">7</div>
+        <div onclick="action('8')" class="btn dark-gray">8</div>
+        <div onclick="action('9')" class="btn dark-gray">9</div>
+        <div onclick="action('x')" class="btn yellow">x</div>
+        <div onclick="action('4')" class="btn dark-gray">4</div>
+        <div onclick="action('5')" class="btn dark-gray">5</div>
+        <div onclick="action('6')" class="btn dark-gray">6</div>
+        <div onclick="action('-')" class="btn yellow">-</div>
+        <div onclick="action('1')" class="btn dark-gray">1</div>
+        <div onclick="action('2')" class="btn dark-gray">2</div>
+        <div onclick="action('3')" class="btn dark-gray">3</div>
+        <div onclick="action('+')" class="btn yellow">+</div>
+        <div onclick="action('0')" class="btn dark-gray" id="zero">0</div>
+        <div onclick="action('.')" class="btn dark-gray">.</div>
+        <div onclick="action('=')" class="btn yellow">=</div>
+      </div>
+    </div>
+  </body>
+  <script src="index.js"></script>
+</html>
